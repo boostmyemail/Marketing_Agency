@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Pulse Dashboard</title>
+    <style>
+        /* Mobile-first overrides */
+        @media only screen and (max-width: 600px) {
+            .container {
+                width: 100% !important;
+                padding: 10px !important;
+            }
+            .summary-item {
+                display: block !important;
+                width: 100% !important;
+                margin-bottom: 15px !important;
+            }
+            .action-item-button {
+                display: block !important;
+                width: 100% !important;
+                text-align: center !important;
+                margin-top: 10px !important;
+            }
+        }
+    </style>
+</head>
+<body style="margin: 0; padding: 0; background-color: #f4f7f6; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color: #2D3748;">
+    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color: #f4f7f6;">
+        <tr>
+            <td align="center" style="padding: 20px 0;">
+                <!-- Main Container -->
+                <table class="container" role="presentation" width="600" cellspacing="0" cellpadding="0" border="0" style="background-color: #ffffff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 1px solid #e2e8f0;">
+                    
+                    <!-- Header -->
+                    <tr>
+                        <td style="padding: 24px; background-color: #1B4332; color: #ffffff;">
+                            <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                                <tr>
+                                    <td style="font-size: 18px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase;">
+                                        [Operation Name] | Weekly Pulse
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- Summary Row -->
+                    <tr>
+                        <td style="padding: 24px 24px 12px 24px;">
+                            <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                                <tr>
+                                    <!-- Cash on Hand -->
+                                    <td class="summary-item" width="50%" align="left" style="padding-right: 10px;">
+                                        <div style="font-size: 14px; color: #718096; margin-bottom: 4px; font-weight: 600;">Total Cash on Hand</div>
+                                        <div style="font-size: 28px; font-weight: 800; color: #1B4332;">$[Total Balance]</div>
+                                    </td>
+                                    <!-- Net Flow -->
+                                    <td class="summary-item" width="50%" align="left" style="border-left: 1px solid #edf2f7; padding-left: 20px;">
+                                        <div style="font-size: 14px; color: #718096; margin-bottom: 4px; font-weight: 600;">Weekly Net Flow</div>
+                                        <div style="font-size: 28px; font-weight: 800; color: #2D3748;">[+$XX / -$XX]</div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- Divider -->
+                    <tr>
+                        <td style="padding: 0 24px;">
+                            <div style="border-bottom: 1px solid #edf2f7;"></div>
+                        </td>
+                    </tr>
+
+                    <!-- Action Items Header -->
+                    <tr>
+                        <td style="padding: 24px 24px 8px 24px;">
+                            <div style="font-size: 16px; font-weight: 700; color: #1B4332; text-transform: uppercase; letter-spacing: 0.5px;">Attention Required</div>
+                        </td>
+                    </tr>
+
+                    <!-- Action Item: Bills -->
+                    <tr>
+                        <td style="padding: 8px 24px;">
+                            <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color: #f8fafc; border-radius: 6px; border: 1px solid #e2e8f0;">
+                                <tr>
+                                    <td style="padding: 16px;">
+                                        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                                            <tr>
+                                                <td align="left">
+                                                    <div style="font-size: 15px; font-weight: 600;">[X] bills due next 7 days</div>
+                                                    <div style="font-size: 14px; color: #718096;">Totaling $[Amount]</div>
+                                                </td>
+                                                <td align="right">
+                                                    <a href="#" class="action-item-button" style="background-color: #2D3748; color: #ffffff; padding: 8px 16px; border-radius: 4px; text-decoration: none; font-size: 14px; font-weight: 600; display: inline-block;">Pay Bills</a>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- Action Item: Cleanup -->
+                    <tr>
+                        <td style="padding: 8px 24px;">
+                            <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color: #f8fafc; border-radius: 6px; border: 1px solid #e2e8f0;">
+                                <tr>
+                                    <td style="padding: 16px;">
+                                        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                                            <tr>
+                                                <td align="left">
+                                                    <div style="font-size: 15px; font-weight: 600;">[X] uncategorized transactions</div>
+                                                    <div style="font-size: 14px; color: #718096;">Needs review for Schedule F</div>
+                                                </td>
+                                                <td align="right">
+                                                    <a href="#" class="action-item-button" style="background-color: #2D3748; color: #ffffff; padding: 8px 16px; border-radius: 4px; text-decoration: none; font-size: 14px; font-weight: 600; display: inline-block;">Fix Now</a>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- Monthly Progress Score -->
+                    <tr>
+                        <td style="padding: 24px 24px 12px 24px;">
+                            <div style="font-size: 14px; font-weight: 700; color: #1B4332; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px;">Monthly Progress Score</div>
+                            <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                                <tr>
+                                    <td style="padding-bottom: 8px;">
+                                        <div style="font-size: 14px; color: #4A5568;">
+                                            <span style="font-weight: 700; color: #2D3748;">[X]%</span> of month categorized
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <!-- Progress Bar -->
+                                        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color: #edf2f7; border-radius: 10px; height: 12px;">
+                                            <tr>
+                                                <td style="background-color: #40916C; border-radius: 10px; width: [X]%; height: 12px;"></td>
+                                                <td style="width: calc(100% - [X]%);"></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- Primary CTA -->
+                    <tr>
+                        <td align="center" style="padding: 32px 24px 40px 24px;">
+                            <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+                                <tr>
+                                    <td align="center" style="border-radius: 6px; background-color: #1B4332;">
+                                        <a href="#" target="_blank" style="background-color: #1B4332; border: 1px solid #1B4332; border-radius: 6px; color: #ffffff; display: inline-block; font-size: 18px; font-weight: 700; line-height: 1.2; padding: 18px 36px; text-align: center; text-decoration: none; width: auto; min-width: 200px;">
+                                            Open My Books
+                                        </a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- Footer -->
+                    <tr>
+                        <td align="center" style="padding: 24px; background-color: #f8fafc; border-top: 1px solid #e2e8f0; color: #718096; font-size: 13px; line-height: 1.6;">
+                            Need help? Reply to this email.<br>
+                            Our U.S. team is standing by.
+                            <div style="margin-top: 12px; font-size: 11px;">
+                                &copy; 2026 Ambrook Platform. All rights reserved.
+                            </div>
+                        </td>
+                    </tr>
+
+                </table>
+                <!-- End Main Container -->
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

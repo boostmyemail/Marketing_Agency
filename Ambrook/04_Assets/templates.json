@@ -1,0 +1,23 @@
+{
+  "TEMPLATE_021926_Text_CTA": {
+    "id": "208007225857",
+    "name": "TEMPLATE_021926_Text_CTA",
+    "description": "Template without an H1, text at the top, followed by a CTA. Then additional text and a sign off from an Ambrook employee.",
+    "mapping": {
+      "intro_text": "module_17679755340991",
+      "cta_button": "module_17689264485441",
+      "secondary_text": "module_17701412628691"
+    }
+  },
+  "Template_021926_Newsletter": {
+    "id": "207998720289",
+    "name": "Template_021926_Newsletter",
+    "description": "Template without an H1, text at the top, followed by a banner image, then more text, and a CTA. Then additional text and a sign off from an Ambrook employee.",
+    "mapping": {
+      "intro_text": "module_17679755340991",
+      "banner_image": "module_17707400069101",
+      "secondary_text": "module_17701412628691",
+      "cta_button": "module_17689264485441"
+    }
+  }
+}

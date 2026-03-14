@@ -1,0 +1,13 @@
+{
+  "subject": "Introducing the Grassroots Partner Program for {{ contact.company }}",
+  "previewText": "NCBA & Montana Farm Bureau already partner with Ambrook. Here’s why.",
+  "fromName": "Gabe Eiger",
+  "intro_text": "<p>Hi {{ contact.firstname|default(\"there\") }},</p><p>I’m Gabe from Ambrook - we build accounting and financial management software for farms, ranches, and other businesses along the agricultural supply chain. 7,000+ operations across the country use Ambrook to manage bookkeeping, payments, and business insights all in one place.</p><p>I’m reaching out because we recently launched the Grassroots Partner Program; a way for associations like {{ contact.company }} to offer their members access to better financial tools at no cost to your organization.</p><p>We handle the setup: a co-branded landing page, promotional materials, and ongoing member communications, making it a light lift for your team to help your members manage finances, improve margins, and stay independent. The NCBA and Montana Farm Bureau have already joined the program, giving their members an exclusive discount on Ambrook Pro, free educational resources, and tools to make their operations more resilient and successful for the long haul.</p>",
+  "cta_button": {
+    "text": "Schedule a quick conversation →",
+    "url": "https://ambrook.com/schedule-demo"
+  },
+  "secondary_text": "<p>Would you be open to a quick conversation about whether the Grassroots Partner Program could be a fit for {{ contact.company }}?</p>",
+  "signature_text": "<p>Best,</p><p>Gabe Eiger<br>Partnerships Lead, Ambrook</p>",
+  "ps_text": ""
+}

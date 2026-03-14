@@ -1,0 +1,10 @@
+{
+  "subject": "10 AI Tips for Glide Builders 🚀",
+  "previewText": "Mastering AI inside your custom apps just got easier.",
+  "banner_image": "https://19936848.fs1.hubspotusercontent-na1.net/hubfs/19936848/10%20tips%20for%20building%20software%20with%20AI%20and%20Glide%20(1).jpg",
+  "main_rich_text": "<h1 style='margin-bottom: 10px;'>Practical AI tips every builder should know</h1><p>AI can do more than generate text. It can help you build faster, more capable software. In this new Glide video, we share ten practical tips that make AI work better inside your apps.</p><p><strong>You’ll learn how to:</strong></p><ul><li>Prompt AI using voice and images for more accurate results</li><li>Treat prompts like editable data for dynamic app behavior</li><li>Avoid errors that slow performance or raise costs</li></ul>",
+  "cta_button": {
+    "text": "Watch the Video",
+    "destination": "https://www.youtube.com/watch?v=PWwQ8LkUixg"
+  }
+}

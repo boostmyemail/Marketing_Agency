@@ -1,0 +1,17 @@
+{
+  "subject": "Transform your admin toolkit",
+  "fromName": "Becca | SchoolAI",
+  "previewText": "AI tools that support teachers and drive student success.",
+  "headline": "Transform your admin toolkit",
+  "subhead": "<p>Hi {{ personalization_token('contact.firstname', 'fellow educator') }},</p>",
+  "top_cta": {
+    "text": "Chat with our team",
+    "destination": "https://schoolai.com/demo?utm_source=email-lifecycle&utm_medium=email&utm_campaign=onboarding_admin3"
+  },
+  "body": "<p style='font-size: 16px; line-height: 160%;'>School leaders like you are constantly balancing teacher support, student success, and operational efficiency. We've developed AI tools specifically for administrators to help streamline these critical responsibilities.</p><p style='font-size: 16px; line-height: 160%;'>Here's how SchoolAI supports your leadership:</p><ul style='font-size: 16px;'><li style='line-height: 160%;'><strong>Personalized Professional Development</strong> - Give teachers on-demand, differentiated support aligned with your initiatives</li><li style='line-height: 160%;'><strong>Streamlined Student Support</strong> - Capture and act on family input more efficiently with AI-powered intake profiles</li><li style='line-height: 160%;'><strong>Quick Policy Access</strong> - Turn your handbooks into instant knowledge bases for staff</li></ul><p style='font-size: 16px; line-height: 175%;'>Book time with our team and we'll demo how to build one just for the workflows you use today.</p><p>&nbsp;</p><p style='font-size: 16px; line-height: 160%;'>Becca Hicks<br>Customer Success Manager</p>",
+  "bottom_cta": {
+    "text": "Chat with our team",
+    "destination": "https://schoolai.com/demo?utm_source=email-lifecycle&utm_medium=email&utm_campaign=onboarding_admin3"
+  },
+  "image": "https://23886037.fs1.hubspotusercontent-na1.net/hubfs/23886037/SchoolAI%20Logo%20Outline%20-%20F2f2f2%20Outline.png"
+}

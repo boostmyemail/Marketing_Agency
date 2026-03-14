@@ -1,0 +1,13 @@
+{
+  "subject": "Free farm finance resources for {{ contact.company }} members",
+  "previewText": "Tax guides, courses, and live webinars your members can access right now — no subscription required.",
+  "fromName": "Gabe Eiger",
+  "intro_text": "<p>Hi {{ contact.firstname|default(\"there\") }},</p><p>I wanted to share one more thing before I step back: even outside of a formal partnership, we’d love to get Ambrook’s free educational resources in front of your members to support your work of making their operations more successful and resilient.</p><p>We produce educational content specifically for farm and ranch operations to get their financial operations in order, that your team can share in newsletters, at events, or on your website - and none of it requires a paid Ambrook subscription:</p><ul><li>Tax deduction guides tailored to farm and ranch operations</li><li>Ambrook Education courses covering financial management fundamentals</li><li>Live Tax Office Hours webinars with ag finance professionals</li></ul>",
+  "cta_button": {
+    "text": "Access free resources →",
+    "url": "https://ambrook.com/education"
+  },
+  "secondary_text": "<p>Associations like NCBA and Montana Farm Bureau have found these resources especially helpful to get organized for tax season, the upcoming busy season, and their long-term growth goals.</p><p>You can find those resources on our site here; members can either sign up for the 8-part course so that one topic is delivered to their inbox weekly, or access all content directly on their own time.</p>",
+  "signature_text": "<p>Either way, thanks for your time and your commitment to creating more resilient farmers and ranchers, communities, and food systems.</p><p>-Gabe</p>",
+  "ps_text": ""
+}

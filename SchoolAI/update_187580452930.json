@@ -1,0 +1,17 @@
+{
+  "subject": "Curriculum-aligned lesson planning, made easy",
+  "fromName": "Becca | SchoolAI",
+  "previewText": "Make it easy to teach at state standards.",
+  "headline": "Curriculum-aligned lesson planning, made easy",
+  "subhead": "<p>Hi {{ personalization_token('contact.firstname', 'fellow educator') }},</p>",
+  "top_cta": {
+    "text": "Book a demo",
+    "destination": "https://schoolai.com/demo?utm_source=email-lifecycle&utm_medium=email&utm_campaign=onboarding_admin"
+  },
+  "body": "<p style='font-size: 16px; line-height: 160%;'>Aligning teacher lesson plans and worksheets with curriculum standards can be a headache. But with a SchoolAI account, you can make it easy for them:</p><p>&nbsp;</p><p style='font-size: 16px; line-height: 160%;'>When teachers create their lesson plans in SchoolAI, they can instantly query state standards and develop plans that meet or exceed them. Of course, they can make their adjustments as needed. It's one of our most valuable tools for ensuring consistency across classrooms.</p><p>&nbsp;</p><p style='font-size: 16px; line-height: 160%;'>Let us show you how it works.</p><p>&nbsp;</p><p style='font-size: 16px; line-height: 160%;'>Becca Hicks<br>Customer Success Manager</p>",
+  "bottom_cta": {
+    "text": "Book a demo",
+    "destination": "https://schoolai.com/demo?utm_source=email-lifecycle&utm_medium=email&utm_campaign=onboarding_admin"
+  },
+  "image": "https://23886037.fs1.hubspotusercontent-na1.net/hubfs/23886037/SchoolAI%20Logo%20Outline%20-%20F2f2f2%20Outline.png"
+}

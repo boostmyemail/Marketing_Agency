@@ -1,0 +1,9 @@
+{
+  "subject": "Is your district applying for the 2026 Digital Learning Grant?",
+  "previewText": "The Digital Learning Grant closes April 6th. See how SchoolAI fits the requirements and book a quick demo.",
+  "module-4-0-0": "<p><span style=\"font-size: 16px; color: #121b2a;\">Hi {{ personalization_token('contact.firstname', 'fellow educator') }},</span></p>\n<p>&nbsp;</p>\n<p style=\"font-size: 16px; line-height: 175%;\"><span style=\"color: #121b2a;\">The 2026 Digital Learning Grant closes April 6th, and we want to make sure your district doesn't miss it. Districts can apply for up to <strong>$50,000</strong> to bring AI-powered learning to their classrooms.</span></p>\n<p>&nbsp;</p>\n<p style=\"font-size: 16px; line-height: 175%;\"><span style=\"color: #121b2a;\">SchoolAI meets IDOE's vendor requirements and aligns to the grant's student outcome priorities. We built a short guide to walk you through the application. <a href=\"#\">[Link to alignment doc]</a></span></p>\n<p>&nbsp;</p>\n<p style=\"font-size: 16px; line-height: 175%;\"><span style=\"color: #121b2a;\">If you have 20 minutes, we'd love to show you how other Indiana districts are using SchoolAI and help you put together a strong application. <a href=\"https://schoolai.com/demo\">Schedule a call</a></span></p>\n<p>&nbsp;</p>\n<p style=\"font-size: 16px; line-height: 175%;\"><span style=\"color: #121b2a;\">The SchoolAI Team.</span></p>",
+  "module-4-0-1": {
+    "text": "Schedule a call",
+    "url": "https://schoolai.com/demo"
+  }
+}

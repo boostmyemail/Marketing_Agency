@@ -1,0 +1,47 @@
+[
+  {
+    "id": "205468468264",
+    "name": "(A) Nurture_012126_MQLDropOff_Email1",
+    "subject": "Welcome to Ambrook—here's what we're about",
+    "previewText": "We build accounting tools for people who grow things.",
+    "body": "Hi {{ contact.firstname }},\n\n \n\nThanks for checking out Ambrook. We know you've got options, and probably a healthy skepticism of anyone claiming to \"fix\" your books.\n\n \n\nFair enough.\n\n \n\nHere's the short version: We build accounting and financial tools specifically for farms, ranches, and growing businesses. Not a generic platform with an ag skin slapped on top. The real thing.\n\n \n\nOver the next few weeks, I'll share a bit more about how Ambrook works and who it's built for. No pressure, no gimmicks, just information so you can decide if it's right for you.",
+    "ctaText": "Explore Ambrook",
+    "ctaLink": "https://ambrook.com/features/tour"
+  },
+  {
+    "id": "205592629174",
+    "name": "Nurture_012126_MQLDropOff_Email2",
+    "subject": "If your books stress you out, you're not alone",
+    "previewText": "Most accounting tools weren't built for how you actually work.",
+    "body": "Hi {{ contact.firstname }},\n\n \n\nHere's something we hear constantly: \"I hate my accounting system, but I don't know what else to do.\"\n\n\nMaybe it's QuickBooks that keeps raising prices and adding features you'll never use. Maybe it's a shoebox of receipts you swear you'll get to. Maybe it's a spreadsheet that made sense three years ago and now gives you a headache.\n\n\nWe get it. That's actually why Ambrook exists.\n\n\nWe built a system that works the way your business works, not the other way around. Connect your accounts, and your transactions flow in automatically. Snap a receipt, and it matches itself. Categorize things once, and Ambrook learns.\n\n\nIt's accounting that doesn't fight you.",
+    "ctaText": "See how it works →",
+    "ctaLink": "https://ambrook.com/schedule-demo"
+  },
+  {
+    "id": "205592629604",
+    "name": "Nurture_012126_MQLDropOff_Email3",
+    "subject": "\"Ambrook actually improved my marriage.\"",
+    "previewText": "We didn't expect to hear that either.",
+    "body": "Hi {{ contact.firstname }},\n\n \n\nWe've heard a lot of feedback about Ambrook over the years. But this one caught us off guard:\n\n\n\"Ambrook improved my relationship with my family.\"\n\n\nSounds dramatic. But when you run a family operation, money conversations get tangled up with everything else. Who spent what. Whether the farm's actually profitable. What the next generation is walking into.\n\n\nWhen the numbers are clear really clear, those conversations change.\nThat's not a software pitch. It's just what happens when people finally feel in control of their finances.\n\n\nCurious if that resonates with you.",
+    "ctaText": "Read more customer stories →",
+    "ctaLink": "https://ambrook.com/case-studies"
+  },
+  {
+    "id": "205592663187",
+    "name": "Nurture_012126_MQLDropOff_Email4",
+    "subject": "The question most accounting tools can't answer",
+    "previewText": "Where do you actually make and lose money?",
+    "body": "Hi {{ contact.firstname }},\n\n \n\nHere's a question that sounds simple but trips up most software:\n\n\n\"How much did I actually spend and make on each part of my operation?\"\n\n\nCattle vs. crops. Field A vs. Field B. Direct sales vs. wholesale. Your regular tools either can't do it, or make you build a spreadsheet on the side.\n\n\nAmbrook handles this natively. We call it enterprise tagging, you can slice your income and expenses however your business actually runs, then see it all on your P&amp;L.\n\n\nNo workarounds. No formulas. Just the answers you need to make real decisions.",
+    "ctaText": "Start your free trial →",
+    "ctaLink": "https://ambrook.com/pricing"
+  },
+  {
+    "id": "205592414778",
+    "name": "Nurture_012126_MQLDropOff_Email5",
+    "subject": " No pressure—just one last thought",
+    "previewText": "If now's not the time, that's okay.",
+    "body": "Hi {{ contact.firstname }},\n\n \n\nI know you're busy. Running an operation doesn't leave a lot of time to evaluate accounting software.\n\n\nSo I'll keep this short:\n\n\nIf you're tired of fighting with your books, if you want to actually understand your numbers without becoming an accountant yourself, Ambrook might be worth 15 minutes of your time.\n\n\nYou can start a free trial and poke around. Or, if you'd rather talk to a real person first, our team is happy to walk you through it. (And yes, we're actual humans who understand your operations, not a call center reading a script.)\n\n \n\nNo pressure either way. We'll be here when you're ready.",
+    "ctaText": "Start your free trial →",
+    "ctaLink": "https://ambrook.com/pricing"
+  }
+]

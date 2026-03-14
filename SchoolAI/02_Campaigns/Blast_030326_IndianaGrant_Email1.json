@@ -1,0 +1,9 @@
+{
+  "subject": "Your district can apply for up to $50,000 for SchoolAI",
+  "previewText": "Up to $50,000 is available through Indiana’s 2026 Digital Learning Grant. Here’s how SchoolAI aligns and how to apply.",
+  "module-4-0-0": "<p><span style=\"font-size: 16px; color: #121b2a;\">Hi {{ personalization_token('contact.firstname', 'fellow educator') }},</span></p>\n<p>&nbsp;</p>\n<p style=\"font-size: 16px; line-height: 175%;\"><span style=\"color: #121b2a;\">Indiana's 2026 Digital Learning Grant is open now, and the deadline is <strong>April 6th</strong>. Districts can apply for up to <strong>$50,000</strong> to fund AI-powered tools that improve student outcomes.</span></p>\n<p style=\"font-size: 16px; line-height: 175%;\">&nbsp;</p>\n<p style=\"font-size: 16px; line-height: 175%;\"><span style=\"color: #121b2a;\">SchoolAI meets IDOE's vendor requirements and aligns directly with the grant's priority areas: improving student outcomes, leveraging data and innovation, and strengthening pathways.</span></p>\n<p style=\"font-size: 16px; line-height: 175%;\">&nbsp;</p>\n<p style=\"font-size: 16px; line-height: 175%;\"><span style=\"color: #121b2a;\">We put together a short guide that shows exactly how SchoolAI aligns to the grant and how to fill out the application. <a href=\"#\">[Link to alignment doc]</a></span></p>\n<p style=\"font-size: 16px; line-height: 175%;\">&nbsp;</p>\n<p style=\"font-size: 16px; line-height: 175%;\"><span style=\"color: #121b2a;\">Want to walk through it together? <a href=\"https://schoolai.com/demo\">Schedule a quick call here.</a></span></p>\n<p style=\"font-size: 16px; line-height: 175%;\">&nbsp;</p>\n<p style=\"font-size: 16px; line-height: 175%;\"><span style=\"color: #121b2a;\">The SchoolAI Team</span></p>",
+  "module-4-0-1": {
+    "text": "Schedule a call",
+    "url": "https://schoolai.com/demo"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "marketing-agency-suite",
+  "version": "1.0.0",
+  "description": "Consolidated toolkit for Marketing Agency clients",
+  "main": "_Agency_Tools/index.js",
+  "scripts": {
+    "agency": "node _Agency_Tools/index.js"
+  },
+  "dependencies": {
+    "axios": "^1.6.0",
+    "dotenv": "^16.3.1",
+    "commander": "^11.1.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

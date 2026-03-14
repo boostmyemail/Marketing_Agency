@@ -1,0 +1,20 @@
+{
+  "TEMPLATE_021926_Newsletter": {
+    "id": "207998568215",
+    "name": "TEMPLATE_021926_Newsletter",
+    "description": "Banner image at the top, with a header underneath, paragraph content, and a button CTA.",
+    "mapping": {
+      "banner_image": "module-1-0-0",
+      "main_rich_text": "module-1-0-1",
+      "cta_button": "module-1-0-2"
+    }
+  },
+  "TEMPLATE_012026_Changelog": {
+    "id": "205480746842",
+    "name": "TEMPLATE_012026_Changelog",
+    "description": "Black body background with dark gray email background.",
+    "mapping": {
+      "main_rich_text": "module-1-0-0"
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "TEMPLATE_021926_Regional_Spotlight": {
+    "id": "202241041945",
+    "name": "TEMPLATE_021926_Regional_Spotlight",
+    "description": "This has a white body block at the top with an H1 and subheader in a column on the left, with a picture of a Dot face on the right, and then a CTA button beneath those. Outside of the white section then comes the main body of the content, then again with a button CTA at the bottom of it.",
+    "mapping": {
+      "headline": "module_17630689319254",
+      "subhead": "module_17630689332937",
+      "top_cta": "module_17630689332939",
+      "body": "module_17550282359191",
+      "bottom_cta": "module_17543328541191",
+      "image": "module_17630689319255"
+    }
+  },
+  "TEMPLATE_021926_TopBanner_NoH1": {
+    "id": "207760007336",
+    "name": "TEMPLATE_021926_TopBanner_NoH1",
+    "description": "A simple template with a white body email and light gray background, with a bnaner at the top, no h1, just content beneath it assuming the H1 is text in the image. A button CTA at the bottom.",
+    "mapping": {
+      "banner_url": "module-2-0-2",
+      "module-4-0-0": "module-2-0-1",
+      "module-4-0-1": "module-2-0-5"
+    }
+  },
+  "TEMPLATE_021926_TopBanner_BottomContent": {
+    "id": "207998766354",
+    "name": "TEMPLATE_021926_TopBanner_BottomContent",
+    "description": "A template with a white body email and light gray background, with a bnaner at the top, h1, subheader underneath in a paragraph, and then a CTA button underneath. Underneath the white section top is the main content, with an additional CTA button, and a signoff underneath it in a paragraph."
+  },
+  "TEMPLATE_021926_TopBanner_H1": {
+    "id": "207998719787",
+    "name": "TEMPLATE_021926_TopBanner_H1",
+    "description": "A template with a white body email and light gray background, with a bnaner at the top, h1, content underneath in a paragraph, and then a CTA button underneath."
+  },
+  "TEMPLATE_022226_Marketing_Newsletter": {
+    "id": "208049650766",
+    "name": "TEMPLATE_022226_Marketing_Newsletter",
+    "description": "A template with a white body email. It contains an H1 and subheader, with a first section of a Title, Space image on the left and details on the right, with a cta button below. Then two sections of banners, h2s, paragraphs, and ctas."
+  }
+}

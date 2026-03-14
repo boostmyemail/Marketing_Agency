@@ -1,0 +1,10 @@
+{
+  "subject": "Smart Mapping Test",
+  "previewText": "This test uses human-readable keys.",
+  "banner_image": "https://19936848.fs1.hubspotusercontent-na1.net/hubfs/19936848/Glide-symbol-black%20(1).png",
+  "main_rich_text": "<h1>It worked!</h1><p>The smart mapping successfully identified the rich text module.</p>",
+  "cta_button": {
+    "text": "Success Link",
+    "destination": "https://www.glideapps.com"
+  }
+}

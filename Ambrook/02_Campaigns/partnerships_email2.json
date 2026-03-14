@@ -1,0 +1,13 @@
+{
+  "subject": "Here’s what Ambrook provides {{ contact.company }} members",
+  "previewText": "Free trials, discounts, co-branded templates, and live webinars — all ready to go.",
+  "fromName": "Gabe Eiger",
+  "intro_text": "<p>Hi {{ contact.firstname|default(\"there\") }},</p><p>I wanted to follow up with a closer look at what {{ contact.company }} members would get through the Grassroots Partner Program - and how little it requires from your team.</p><p><strong>What your members receive:</strong></p><ul><li>Free trial of Ambrook Pro plus an exclusive member discount (10% off their continued subscription)</li><li>Ongoing educational content including tax deduction guides, farm finance articles, and new product updates.</li><li>Live webinars and Tax Office Hours with ag finance professionals that associations can promote to members</li></ul><p><strong>What we provide your team:</strong></p><ul><li>Co-branded landing page with your logo and a unique tracking link</li><li>Ready-made marketing templates: two email drafts, a newsletter blurb, social posts, and a one-pager PDF - all customized with {{ contact.company }}’s name</li><li>Ongoing member communications - we send farm finance tips and product updates to members on your behalf</li></ul>",
+  "cta_button": {
+    "text": "See the promotional kit →",
+    "url": "https://ambrook.com/partners"
+  },
+  "secondary_text": "<p>All we’d ask is that you include Ambrook in one newsletter or email blast and, optionally, add us to your member benefits page. Most associations go from “yes” to live in under a week.</p><p>Want me to send over the landing page template or promotional kit so you can see exactly what this looks like? I’ll also stand by to chat over the phone or email at your convenience.</p>",
+  "signature_text": "<p>Thanks,</p><p>Gabe</p>",
+  "ps_text": ""
+}

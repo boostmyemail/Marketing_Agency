@@ -1,0 +1,11 @@
+{
+  "subject": "Ambrook Full Service for your Stocker Operation",
+  "intro_text": "<p>Hi {{ contact.firstname }},</p><p>Tommy here from Ambrook. Wanted to touch base as it looks like you’ve got a complex stocker operation that might need an additional set of eyes.</p><p>You might be a great fit for our Full Service plan.</p><p>Full Service pairs you with a dedicated Account Manager who will work with you 1-on-1 over the course of several months to save you time behind the computer, make sense of your books, and drive informed business decisions such as:</p><ul><li>A clear view of cost per pound of gain by pen and feeding program</li><li>Cash flow projections so you can plan your next purchase with confidence</li><li>Retain vs. sell analysis to maximize every decision</li></ul>",
+  "cta_button": {
+    "text": "Book time with me here.",
+    "url": {
+      "url": "https://cal.com/team/ambrook/ambrook-full-service-consultation-call?overlayCalendar=true"
+    }
+  },
+  "secondary_text": "<p>Or if you’d like to give me a call, you can reach me at (303)- 276-2423. Looking forward to hearing from you.</p><p>Hope the cattle are gaining well,<br>Tommy King<br>Ambrook Full Service</p><p>P.S. Your project and enterprise-level categories are a great place to start to track your profitability per pen and have a complete grasp on your cost and gain per group.</p>"
+}

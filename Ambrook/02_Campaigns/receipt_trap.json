@@ -1,0 +1,12 @@
+{
+  "subject": "The $100 Receipt Trap",
+  "previewText": "That store slip is worth more than you think.",
+  "fromName": "Ambrook",
+  "intro_text": "<p>Hi {{ contact.firstname|default(\"there\") }},</p><p>You know that receipt sitting in your truck console right now? The one from the feed store, or the parts run, or the chemical purchase you made last week?</p><p>It's not just paper. It's audit protection. It's proof of what your inputs actually cost. And when it disappears, crumpled in a pocket, blown out on the barn floor, never printed from an email — you lose more than a piece of paper. You lose the ability to prove what you spent, what you own, and whether you actually made money this year.</p><p><strong>Here's where it hits hardest:</strong></p><ul><li>After a disaster, that receipt is the difference between getting paid what your inventory was worth and getting whatever the adjuster decides.</li><li>At year-end, it's how you know whether your per-head cost or your cost per acre is actually working or whether you're just trading dollars and hoping for the best.</li><li>With a vendor dispute, it's your leverage. A bad batch of seed or a missing rebate is a phone call when you have proof. It's a write-off when you don't.</li></ul>",
+  "banner_image": "",
+  "secondary_text": "<p>Ambrook makes this a 10-second habit instead of a year-end scramble. Snap a photo from your phone, and the app reads the line items, matches it to the transaction, and files it, no desk time, no shoebox, no spreadsheet.</p>",
+  "cta_button": {
+    "text": "Read the full tactical guide",
+    "url": "https://ambrook.com/education/accounting-basics/five-reasons-to-hold-onto-receipts"
+  }
+}

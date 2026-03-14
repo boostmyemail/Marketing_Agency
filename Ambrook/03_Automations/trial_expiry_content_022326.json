@@ -1,0 +1,11 @@
+{
+  "subject": "Your Ambrook subscription starts tomorrow",
+  "previewText": "Quick heads-up on what to expect.",
+  "fromName": "Paige from Ambrook",
+  "intro_text": "<p style=\"font-size: 16px; line-height: 1.6; color: #000000;\">Hi {{ contact.firstname }},</p>\n<p style=\"font-size: 16px; line-height: 1.6; color: #000000;\">&nbsp;</p>\n<p style=\"font-size: 16px; line-height: 1.6; color: #000000;\">Just a heads-up - your Ambrook free trial ends tomorrow, {{ trial_end_date }}. Since you have a card on file, your {{ plan_name }} subscription will begin automatically.</p>",
+  "secondary_text": "<p style=\"font-size: 16px; line-height: 1.6; color: #000000;\"><strong>What changes:</strong> Nothing, really. You'll keep full access to everything you've set up -- your chart of accounts, connected banks, tagged transactions, and reports. No data is lost, no settings change.</p>\n<p style=\"font-size: 16px; line-height: 1.6; color: #000000;\">&nbsp;</p>\n<p style=\"font-size: 16px; line-height: 1.6; color: #000000;\"><strong>What to do if you need help:</strong> If there's anything about your setup you want to get right before your subscription starts, reply to this email. We'll make sure you're taken care of.</p>\n<p style=\"font-size: 16px; line-height: 1.6; color: #000000;\">&nbsp;</p>\n<p style=\"font-size: 16px; line-height: 1.6; color: #000000;\">Best,</p>\n<p style=\"font-size: 16px; line-height: 1.6; color: #000000;\">&nbsp;</p>\n<p style=\"font-size: 16px; line-height: 1.6; color: #000000;\">Paige Wyler<br>Head of Customer Success, Ambrook</p>",
+  "cta_button": {
+    "text": "",
+    "destination": "mailto:hello@ambrook.com"
+  }
+}

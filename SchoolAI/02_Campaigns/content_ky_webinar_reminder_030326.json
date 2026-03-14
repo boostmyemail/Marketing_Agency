@@ -1,0 +1,10 @@
+{
+  "subject": "Last chance: Real-time writing support",
+  "previewText": "Grab your seat for Thursday's session and learn to catch misconceptions before they stick.",
+  "banner_url": "https://23886037.fs1.hubspotusercontent-na1.net/hubfs/23886037/Community%20digital%20events%20banner.jpg",
+  "module-4-0-0": "<p><span style=\"font-size: 16px; color: #121b2a;\">Hi {{ personalization_token('contact.firstname', 'fellow educator') }},</span></p>\n<p>&nbsp;</p>\n<p style=\"font-size: 16px; line-height: 175%;\"><span style=\"color: #121b2a;\">What would change in your classroom? Students could get feedback while they are writing. They do not have to wait until you finish grading.</span></p>\n<p>&nbsp;</p>\n<p style=\"font-size: 16px; line-height: 175%;\"><span style=\"color: #121b2a;\">⏳ This is your last chance to join us for:</span></p>\n<h3 style=\"font-size: 20px; line-height: 150%;\"><span style=\"color: #121b2a;\">Real-Time Writing Support with SchoolAI</span></h3>\n<p style=\"font-size: 16px; line-height: 175%;\"><span style=\"color: #121b2a;\">🗓 Thursday, March 5</span><br>\n<span style=\"color: #121b2a;\">⏰ 4:00 – 4:30 PM</span></p>\n<p>&nbsp;</p>\n<p style=\"font-size: 16px; line-height: 175%;\"><span style=\"color: #121b2a;\">In just 30 minutes, you will see how SchoolAI Spaces help you:</span></p>\n<ul style=\"font-size: 16px; line-height: 175%; color: #121b2a;\">\n<li>Catch misconceptions before they stick</li>\n<li>Support revision in real time</li>\n<li>Empower stronger writers</li>\n<li>Lighten your grading load</li>\n</ul>\n<p>&nbsp;</p>\n<p style=\"font-size: 16px; line-height: 175%;\"><span style=\"color: #121b2a;\">More feedback. Better writing. Less overwhelm.</span></p>\n<p>&nbsp;</p>\n<p style=\"font-size: 16px; line-height: 175%;\"><span style=\"color: #121b2a;\">See you Thursday!</span></p>\n<p>&nbsp;</p>\n<p style=\"font-size: 16px; line-height: 175%;\"><span style=\"color: #121b2a;\">Brittany, Stephanie, and the SchoolAI team</span></p>",
+  "module-4-0-1": {
+    "text": "Grab your seat before we start",
+    "destination": "https://schoolai.zoom.us/meeting/register/u4r-4UhLTaWHQ8IO7MWDzA"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "subject": "📊 Is your CPA ready for your books?",
+  "previewText": "Stop guessing your inventory value. Get audit-ready reports in one click.",
+  "intro_text": "<p>Hi {{ contact.firstname }},</p><p>&nbsp;</p><p>Inventory is often the biggest question mark on a ranch's balance sheet. With Ambrook, your cattle, feed, and grain are tracked in real-time, meaning your CPA gets a clean, accurate report without the back-and-forth spreadsheets. No more 'best guesses'—just audit-ready data.</p>",
+  "banner_image": "https://24270685.fs1.hubspotusercontent-na1.net/hubfs/24270685/lifecycle-sequence-5-wallet.jpg",
+  "secondary_text": "<p>We are certain that a quick glance at the new inventory capabilities will surprise and delight you.</p>",
+  "cta_button": {
+    "text": "Get Audit Ready",
+    "destination": "https://ambrook.com/about"
+  }
+}
