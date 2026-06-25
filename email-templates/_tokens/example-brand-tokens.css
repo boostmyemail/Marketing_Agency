@@ -1,0 +1,27 @@
+/*
+  BRAND TOKENS — copy this file into /clients/[client-name]/brand-tokens.css
+  and update the values to match the client's brand.
+
+  These variables are pasted into the :root block at the top of each HTML
+  email template, replacing the default values.
+
+  Typically you only need to change 3–5 of these per client:
+  - color-brand-primary (main brand color)
+  - color-brand-hover   (slightly darker version of primary)
+  - color-bg-hero       (hero section bg — try a very light tint of primary)
+  - color-step-bg       (callout box bg — lightest tint of primary, ~5-10% opacity)
+  - font-stack          (if client has a web-safe brand font)
+*/
+
+:root {
+  --color-brand-primary:   #5B4BF5;   /* ← swap: client primary brand color */
+  --color-brand-hover:     #4438D9;   /* ← swap: darken primary by ~10% */
+  --color-bg-body:         #F6F7F9;   /* outer email background — usually keep */
+  --color-bg-card:         #FFFFFF;   /* email card background — usually keep */
+  --color-bg-hero:         #F0F1F3;   /* hero section bg — light gray or light brand tint */
+  --color-text-primary:    #111118;   /* body text — usually keep */
+  --color-text-secondary:  #6B7280;   /* supporting text — usually keep */
+  --color-border:          #E5E7EB;   /* section dividers — usually keep */
+  --color-step-bg:         #F0EEFF;   /* ← swap: lightest tint of brand primary */
+  --font-stack:            -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}

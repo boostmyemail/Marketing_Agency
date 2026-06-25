@@ -1,0 +1,19 @@
+/*
+  Brand tokens for: [Client Name]
+  ESP: [HubSpot / Customer.io]
+  Notion row: [paste Notion URL here]
+  Last updated: [date]
+*/
+
+:root {
+  --color-brand-primary:   #000000;   /* TODO: replace with client primary */
+  --color-brand-hover:     #000000;   /* TODO: replace with client hover */
+  --color-bg-body:         #F6F7F9;
+  --color-bg-card:         #FFFFFF;
+  --color-bg-hero:         #F0F1F3;   /* TODO: consider light brand tint */
+  --color-text-primary:    #111118;
+  --color-text-secondary:  #6B7280;
+  --color-border:          #E5E7EB;
+  --color-step-bg:         #F5F5F5;   /* TODO: replace with light brand tint */
+  --font-stack:            -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
