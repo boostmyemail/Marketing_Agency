@@ -93,7 +93,7 @@
 
     /* ── Body content ── */
     .email-body {
-      padding: 44px 40px 40px;
+      padding: 44px 40px 48px;
       text-align: center;
     }
     .headline {
@@ -135,20 +135,6 @@
       color: var(--color-text-secondary);
     }
 
-    /* ── Image slot ── */
-    .email-image {
-      border-top: 1px solid var(--color-border);
-      border-bottom: 1px solid var(--color-border);
-      line-height: 0;
-      font-size: 0;
-    }
-    .email-image img {
-      display: block;
-      width: 100%;
-      height: auto;
-      max-width: 100%;
-    }
-
     /* ── Footer ── */
     .email-footer {
       background: var(--color-bg-body);
@@ -182,7 +168,7 @@
         border-right: none;
       }
       .email-header { padding: 20px 24px; }
-      .email-body { padding: 32px 24px 28px; }
+      .email-body { padding: 32px 24px 36px; }
       .headline { font-size: 22px; }
       .email-footer { padding: 20px 24px; }
     }
@@ -230,13 +216,6 @@
         <p class="btn-caption">[Supporting line — e.g. No signup needed]</p>
 
       </div><!-- /.email-body -->
-
-      <!-- ═══════════════════════════════════════
-           IMAGE — swap src with client asset (team photo, illustration, product shot)
-      ═══════════════════════════════════════ -->
-      <div class="email-image">
-        <img src="https://placehold.co/600x280/F0F1F3/9CA3AF?text=swap+your+image+here" alt="" width="600">
-      </div>
 
       <!-- ═══════════════════════════════════════
            FOOTER
