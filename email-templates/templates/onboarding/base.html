@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>{{email_subject}}</title>
+  <title>See your cash position in real time — no spreadsheet required</title>
 
   <!--
   ==============================================
@@ -402,9 +402,9 @@
 </head>
 <body>
 
-  <!-- Hidden preheader — customize per email number in sequence -->
+  <!-- Hidden preheader -->
   <div class="preheader">
-    {{preheader_text}} &#8203;&nbsp;&#847; &zwnj;&nbsp;&#847; &zwnj;&nbsp;&#847; &zwnj;&nbsp;&#847; &zwnj;&nbsp;&#847;
+    Your cash flow view is one click away — here's how to read it. &#8203;&nbsp;&#847; &zwnj;&nbsp;&#847; &zwnj;&nbsp;&#847; &zwnj;&nbsp;&#847; &zwnj;&nbsp;&#847;
   </div>
 
   <div class="email-outer">
@@ -417,7 +417,6 @@
       ═══════════════════════════════════════ -->
       <div class="email-header">
         <div class="logo-mark">
-          <!-- swap: inline SVG or <img src="logo.png"> -->
           <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="2" y="2" width="6" height="6" rx="1.5" fill="white"/>
             <rect x="10" y="2" width="6" height="6" rx="1.5" fill="white" opacity="0.6"/>
@@ -425,7 +424,7 @@
             <rect x="10" y="10" width="6" height="6" rx="1.5" fill="white" opacity="0.3"/>
           </svg>
         </div>
-        <span class="logo-wordmark">[Product Name]</span>
+        <span class="logo-wordmark">Pulse</span>
       </div>
 
       <!-- ═══════════════════════════════════════
@@ -435,150 +434,98 @@
       ═══════════════════════════════════════ -->
       <div class="email-hero">
 
-        <!-- Headline: state the outcome, not the feature name -->
         <h1 class="hero-headline">
-          {{hero_headline}}
-          <!-- Example: "See exactly where your runway stands — without touching a spreadsheet." -->
+          See exactly where your runway stands — without touching a spreadsheet.
         </h1>
 
-        <!-- Subhead: connect to where the user is in their journey right now -->
         <p class="hero-sub">
-          {{hero_subhead}}
-          <!-- Example: "You've connected your bank account. This is the next step that turns raw transactions into a picture you can act on." -->
+          You've connected your bank account. This is the next step that turns raw transactions into a picture you can actually act on.
         </p>
 
-        <!-- PRIMARY CTA — action verb, high contrast, single destination -->
-        <a href="{{cta_url}}" class="btn-primary">
-          {{cta_label}}
-          <!-- Example labels: "Try it now →" / "See it in action →" / "Set it up in 2 minutes →" -->
+        <a href="https://app.pulse.com/cash-flow" class="btn-primary">
+          See it in action &rarr;
         </a>
-        <p class="btn-caption">{{cta_caption}}</p>
-        <!-- Example caption: "Takes 2 minutes &nbsp;·&nbsp; No credit card needed" -->
+        <p class="btn-caption">Takes 2 minutes &nbsp;&middot;&nbsp; No setup required</p>
 
       </div><!-- /.email-hero -->
 
       <div class="email-body">
 
-        <!-- ── What it is + Why it matters ───────────────────
-             Target: 2–4 sentences.
-             Line 1: plain-English description of the feature.
-             Lines 2–3: why it matters to this specific user now.
-             Do not recap what they already know.
-        ──────────────────────────────────────────────────── -->
         <div class="intro-copy">
-          <p>{{intro_what}}</p>
-          <!-- Example: "[Feature name] gives you a live view of your cash position — updated automatically each time a transaction comes in." -->
-          <p>{{intro_why}}</p>
-          <!-- Example: "Most founders catch a shortfall <strong>after</strong> it hits. This shows you the dip <strong>before</strong> it happens, so you have time to act." -->
+          <p>Cash Flow gives you a live view of your cash position — updated automatically every time a transaction comes in.</p>
+          <p>Most founders catch a shortfall <strong>after</strong> it hits. This shows you the dip <strong>before</strong> it happens, so you have time to act.</p>
         </div>
 
-        <!-- ── Image block ─────────────────────────────────
-             Options (pick one per email):
-               • Static screenshot   — lowest friction to produce
-               • Annotated PNG       — arrows/callouts baked in; most instructive
-               • GIF / short clip    — show the feature in motion; keep under 1 MB
-               • Before / After      — effective when the feature transforms something
-
-             Max-width 520px keeps layout stable across clients.
-             Always set alt text — many users read with images off.
-        ──────────────────────────────────────────────────── -->
         <div class="image-block">
           <img
-            src="{{feature_image_url}}"
-            alt="{{feature_image_alt}}"
+            src="https://placehold.co/520x300/EEF0F3/6B7280?text=Cash+Flow+screenshot"
+            alt="Pulse Cash Flow dashboard showing runway, burn rate, and 90-day forecast"
             width="520"
           >
         </div>
-        <p class="image-caption">{{image_caption}}</p>
-        <!-- Example caption: "Annotated: the three numbers that matter most on your cash flow view." -->
+        <p class="image-caption">Annotated: the three numbers that matter most — runway, monthly burn, and your 90-day forecast line.</p>
 
-        <!-- ── How it works — numbered steps ─────────────────
-             3 steps max for a single-feature email.
-             Title = what to do. Body = the result or why it matters.
-        ──────────────────────────────────────────────────── -->
         <p class="section-label">How it works</p>
         <ul class="steps-list">
           <li>
             <span class="step-num">1</span>
             <div class="step-text">
-              <h3>{{step_1_title}}</h3>
-              <p>{{step_1_body}}</p>
+              <h3>Open Cash Flow from your sidebar</h3>
+              <p>Pulse has already pulled in your transactions — no import needed. Your current balance and burn rate are calculated automatically.</p>
             </div>
           </li>
           <li>
             <span class="step-num">2</span>
             <div class="step-text">
-              <h3>{{step_2_title}}</h3>
-              <p>{{step_2_body}}</p>
+              <h3>Set your expected monthly expenses</h3>
+              <p>Add any recurring costs that haven't hit your account yet — payroll, rent, subscriptions. This is what makes the 90-day forecast accurate.</p>
             </div>
           </li>
           <li>
             <span class="step-num">3</span>
             <div class="step-text">
-              <h3>{{step_3_title}}</h3>
-              <p>{{step_3_body}}</p>
+              <h3>Read the forecast line, not just the balance</h3>
+              <p>The balance tells you where you are. The forecast line tells you where you're heading — and flags the earliest date your runway could become a problem.</p>
             </div>
           </li>
         </ul>
 
-        <!-- ── Social proof ────────────────────────────────
-             One sentence. Data-driven stat or direct quote.
-             Answers "does this actually work?" before the CTA.
-             Not a full testimonial block.
-        ──────────────────────────────────────────────────── -->
         <div class="proof-strip">
           <span class="proof-icon">&#128172;</span>
-          <!-- swap: testimonial quote icon, checkmark, or stat icon -->
           <p class="proof-text">
-            {{proof_text}}
-            <!-- Example: "<strong>Teams that set up cash flow forecasting in their first week are 3× more likely to hit their 90-day runway target</strong> — based on data across 2,000+ [Product] accounts." -->
+            <strong>Founders who set up Cash Flow in their first week are 3× more likely to hit their 90-day runway target</strong> — based on data across 2,400+ Pulse accounts.
           </p>
         </div>
 
-        <!-- ── Repeat CTA ──────────────────────────────────
-             Same URL as hero CTA. Placed after steps + proof
-             so users who skimmed can act immediately.
-             This is NOT a second CTA — it's the same destination.
-        ──────────────────────────────────────────────────── -->
-        <a href="{{cta_url}}" class="btn-primary">
-          {{cta_label}}
+        <a href="https://app.pulse.com/cash-flow" class="btn-primary">
+          See it in action &rarr;
         </a>
-        <p class="btn-caption" style="margin-bottom: 0;">{{cta_caption}}</p>
+        <p class="btn-caption" style="margin-bottom: 0;">Takes 2 minutes &nbsp;&middot;&nbsp; No setup required</p>
 
         <div class="divider"></div>
 
-        <!-- ── Personal sign-off ──────────────────────────── -->
         <div class="signoff">
-          <div class="avatar">
-            <!-- swap: <img src="{{sender_avatar_url}}" alt="{{sender_name}}"> -->
-            &#128100;
-          </div>
+          <div class="avatar">&#128100;</div>
           <div class="signoff-text">
             <p>
-              <strong>{{sender_name}}</strong><br>
-              {{signoff_text}}
-              <!-- Example: "I wrote this email personally — if you hit a snag or have a question, just hit reply." -->
+              <strong>Maya from Pulse</strong><br>
+              I wrote this one personally — if you hit a snag or have a question about what you're seeing, just hit reply. I read every response.
             </p>
           </div>
         </div>
 
       </div><!-- /.email-body -->
 
-      <!-- ═══════════════════════════════════════
-           FOOTER
-           Elements: help link (text only — not a button),
-           unsubscribe, reason for receiving, address, privacy.
-      ═══════════════════════════════════════ -->
       <div class="email-footer">
         <div class="footer-links">
-          <a href="{{help_url}}">Need help? Visit our docs</a>
+          <a href="https://help.pulse.com">Need help? Visit our docs</a>
           &nbsp;&middot;&nbsp;
-          <a href="{{unsubscribe_url}}">Unsubscribe</a>
+          <a href="https://app.pulse.com/unsubscribe">Unsubscribe</a>
         </div>
         <p class="footer-legal">
-          &copy; {{year}} [Company Legal Name] &middot; [Street Address, City, State ZIP]<br>
-          You're receiving this because you signed up for a [Product Name] account.<br>
-          <a href="{{privacy_url}}">Privacy Policy</a>
+          &copy; 2026 Pulse Financial Inc. &middot; 340 Pine Street, Suite 800, San Francisco, CA 94104<br>
+          You're receiving this because you created a Pulse account.<br>
+          <a href="https://pulse.com/privacy">Privacy Policy</a>
         </p>
       </div>
 
