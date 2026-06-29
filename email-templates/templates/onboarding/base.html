@@ -3,23 +3,587 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Onboarding</title>
-  <!--
-    BASE TEMPLATE: Onboarding
-    
-    This is the HTML shell for all emails in this program type.
-    Content (subject line, body copy, CTAs) changes per email number,
-    but the structure and brand tokens stay the same.
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>{{email_subject}}</title>
 
-    To use for a client:
-    1. Copy this file into /clients/[client-name]/onboarding.html
-    2. Replace the :root token block with the client's brand-tokens.css values
-    3. Fill in copy for each email in the sequence — do not create separate
-       HTML files per email number. Use this one file as the approved shell.
+  <!--
+  ==============================================
+  BASE TEMPLATE: Onboarding — Single-Feature Education
+  ==============================================
+  Purpose: Teach one specific feature per email in the onboarding sequence.
+           Emails 2–N (after welcome). One CTA. No nav links.
+
+  BEFORE SENDING: Check upstream conditional logic.
+  If {{user_has_completed_action}} === true → suppress this email or
+  route to the "already-done" variant. Sending a feature email to a user
+  who already activated that feature creates friction, not value.
+
+  To use for a client:
+  1. Copy this file into /clients/[client-name]/onboarding.html
+  2. Replace the :root token block with the client's brand-tokens.css values
+  3. Fill in all {{merge_tags}} for each email in the sequence
+  4. Swap the image block src to a screenshot, annotated PNG, or GIF
+  5. Do not create separate HTML files per email number — use this shell
+  ==============================================
   -->
+
+  <!--
+  ==============================================
+  BRAND TOKENS — swap these per client
+  ==============================================
+  -->
+  <style>
+    :root {
+      --color-brand-primary:      #5B4BF5;   /* swap: primary brand color */
+      --color-brand-hover:        #4438D9;   /* swap: darker CTA hover (~10% darker) */
+      --color-bg-body:            #F6F7F9;   /* email background */
+      --color-bg-card:            #FFFFFF;   /* card/content bg */
+      --color-bg-hero:            #F0F1F3;   /* hero section bg — light gray or light brand tint */
+      --color-text-primary:       #111118;   /* body text */
+      --color-text-secondary:     #6B7280;   /* meta / supporting text */
+      --color-text-on-dark:       #111118;   /* reused on light hero — same as primary */
+      --color-text-on-dark-muted: #6B7280;   /* reused on light hero — same as secondary */
+      --color-border:             #E5E7EB;
+      --color-step-bg:            #F0EEFF;   /* step callout background — lightest tint of primary */
+      --color-proof-bg:           #F8F9FA;   /* social proof strip */
+      --font-stack:               -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      --radius-card:              12px;
+      --radius-btn:               8px;
+      --max-width:                600px;
+    }
+  </style>
+
+  <style>
+    /* ── Reset ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: var(--color-bg-body);
+      font-family: var(--font-stack);
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--color-text-primary);
+      -webkit-font-smoothing: antialiased;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* ── Email wrapper ── */
+    .email-outer {
+      width: 100%;
+      padding: 32px 16px 48px;
+    }
+    .email-card {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      background: var(--color-bg-card);
+      border-radius: var(--radius-card);
+      overflow: hidden;
+      border: 1px solid var(--color-border);
+    }
+
+    /* ── Preheader (hidden preview text) ── */
+    .preheader {
+      display: none;
+      max-height: 0;
+      overflow: hidden;
+      mso-hide: all;
+      font-size: 1px;
+      line-height: 1px;
+      color: var(--color-bg-body);
+    }
+
+    /* ── Header — Logo only, no nav links ── */
+    .email-header {
+      padding: 24px 40px;
+      border-bottom: 1px solid var(--color-border);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .logo-mark {
+      width: 32px;
+      height: 32px;
+      background: var(--color-brand-primary);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .logo-mark svg { display: block; }
+    .logo-wordmark {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--color-text-primary);
+      letter-spacing: -0.3px;
+    }
+
+    /* ── Hero — above-the-fold zone ── */
+    /*
+      Anatomy of this zone (in order):
+        1. Headline  — states the outcome/benefit the user is about to understand
+        2. Subhead   — one sentence connecting this to where the user is in their journey
+        3. CTA button — action-verb label, high contrast
+      No navigation links above this section.
+    */
+    .email-hero {
+      background: var(--color-bg-hero);
+      padding: 48px 40px 44px;
+      text-align: left;
+    }
+    .hero-headline {
+      font-size: 28px;
+      font-weight: 700;
+      line-height: 1.22;
+      color: var(--color-text-on-dark);
+      letter-spacing: -0.4px;
+      margin-bottom: 12px;
+    }
+    .hero-sub {
+      font-size: 15px;
+      line-height: 1.65;
+      color: var(--color-text-on-dark-muted);
+      margin-bottom: 32px;
+      max-width: 460px;
+    }
+
+    /* ── CTA Button — primary ── */
+    .btn-primary {
+      display: inline-block;
+      background: var(--color-brand-primary);
+      color: #FFFFFF !important;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 600;
+      padding: 14px 28px;
+      border-radius: var(--radius-btn);
+      letter-spacing: -0.1px;
+      line-height: 1;
+      mso-padding-alt: 14px 28px;
+    }
+    .btn-primary:hover {
+      background: var(--color-brand-hover);
+    }
+    .btn-caption {
+      margin-top: 10px;
+      font-size: 12px;
+      color: var(--color-text-on-dark-muted);
+    }
+
+    /* ── Body content ── */
+    .email-body {
+      padding: 40px 40px 32px;
+    }
+
+    /* ── What / Why intro copy ── */
+    /*
+      Target: 2–4 sentences total.
+        Line 1: What it is (one line).
+        Lines 2–3: Why it matters to this user right now.
+      Keep sentences short. Most users skim — bold key phrases.
+    */
+    .intro-copy {
+      font-size: 15px;
+      line-height: 1.7;
+      color: var(--color-text-primary);
+      margin-bottom: 32px;
+    }
+    .intro-copy p + p { margin-top: 12px; }
+
+    /* ── Image block — flex container for any visual type ── */
+    /*
+      Supports: static screenshot, annotated PNG, GIF, before/after image.
+      Fixed-width container prevents layout breaks on mobile.
+      For GIFs: keep under 1 MB; set a static first frame as fallback for
+      email clients that don't animate.
+      For annotated screenshots: arrows/callouts should be baked into
+      the image, not overlaid in CSS.
+    */
+    .image-block {
+      width: 100%;
+      max-width: 520px;
+      margin: 0 auto 32px;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid var(--color-border);
+      display: block;
+    }
+    .image-block img {
+      width: 100%;
+      max-width: 520px;
+      height: auto;
+      display: block;
+      border: none;
+    }
+    .image-caption {
+      font-size: 12px;
+      color: var(--color-text-secondary);
+      text-align: center;
+      margin-top: 8px;
+      margin-bottom: 32px;
+    }
+
+    /* ── How it works — numbered steps ── */
+    /*
+      3 steps is the ceiling for a single-feature education email.
+      Each step: title (what to do) + one-sentence explanation (why/result).
+      Numbered visuals reduce setup anxiety.
+    */
+    .section-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-text-secondary);
+      margin-bottom: 16px;
+    }
+    .steps-list {
+      list-style: none;
+      margin-bottom: 32px;
+    }
+    .steps-list li {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      padding: 18px 20px;
+      background: var(--color-step-bg);
+      border-left: 3px solid var(--color-brand-primary);
+      border-radius: 0 8px 8px 0;
+      margin-bottom: 10px;
+    }
+    .steps-list li:last-child { margin-bottom: 0; }
+    .step-num {
+      min-width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--color-brand-primary);
+      color: #FFF;
+      font-size: 13px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .step-text h3 {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--color-text-primary);
+      margin-bottom: 3px;
+    }
+    .step-text p {
+      font-size: 13px;
+      color: var(--color-text-secondary);
+      line-height: 1.55;
+    }
+
+    /* ── Social proof strip ── */
+    /*
+      One sentence max. Data-driven stat or direct quote.
+      Placed after the how-it-works steps so it answers
+      "does this actually work?" before the repeat CTA.
+      Not a full testimonial block — keep it tight.
+    */
+    .proof-strip {
+      background: var(--color-proof-bg);
+      border: 1px solid var(--color-border);
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin-bottom: 32px;
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+    .proof-icon {
+      font-size: 18px;
+      line-height: 1;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .proof-text {
+      font-size: 14px;
+      color: var(--color-text-secondary);
+      line-height: 1.55;
+    }
+    .proof-text strong {
+      color: var(--color-text-primary);
+    }
+
+    /* ── Divider ── */
+    .divider {
+      height: 1px;
+      background: var(--color-border);
+      margin: 32px 0;
+    }
+
+    /* ── Personal sign-off ── */
+    .signoff {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 8px;
+    }
+    .avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--color-step-bg);
+      border: 2px solid var(--color-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      flex-shrink: 0;
+      overflow: hidden;
+    }
+    .avatar img {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: block;
+    }
+    .signoff-text p {
+      font-size: 14px;
+      color: var(--color-text-secondary);
+      line-height: 1.55;
+    }
+    .signoff-text strong {
+      font-size: 14px;
+      color: var(--color-text-primary);
+      font-weight: 600;
+    }
+
+    /* ── Footer ── */
+    /*
+      Footer elements in order:
+        1. Help link (secondary escape valve — text only, not a button)
+        2. Unsubscribe
+        3. Reason for receiving this email (reduces spam reports)
+        4. Physical address (CAN-SPAM / GDPR)
+        5. Privacy Policy
+    */
+    .email-footer {
+      background: var(--color-bg-body);
+      border-top: 1px solid var(--color-border);
+      padding: 24px 40px;
+      text-align: center;
+    }
+    .footer-links {
+      margin-bottom: 12px;
+    }
+    .footer-links a {
+      color: var(--color-text-secondary);
+      text-decoration: none;
+      font-size: 12px;
+      margin: 0 8px;
+    }
+    .footer-links a:hover { text-decoration: underline; }
+    .footer-legal {
+      font-size: 11px;
+      color: var(--color-text-secondary);
+      line-height: 1.7;
+    }
+    .footer-legal a {
+      color: var(--color-text-secondary);
+    }
+
+    /* ── Mobile — single-column, fluid ── */
+    @media (max-width: 620px) {
+      .email-outer  { padding: 0; }
+      .email-card   { border-radius: 0; border-left: none; border-right: none; }
+      .email-header { padding: 20px 24px; }
+      .email-hero   { padding: 36px 24px 32px; }
+      .hero-headline { font-size: 23px; }
+      .email-body   { padding: 28px 24px 24px; }
+      .image-block  { max-width: 100%; border-radius: 8px; }
+      .email-footer { padding: 20px 24px; }
+    }
+  </style>
 </head>
 <body>
-  <!-- TODO: build out this template -->
-  <!-- Program type: Onboarding -->
+
+  <!-- Hidden preheader — customize per email number in sequence -->
+  <div class="preheader">
+    {{preheader_text}} &#8203;&nbsp;&#847; &zwnj;&nbsp;&#847; &zwnj;&nbsp;&#847; &zwnj;&nbsp;&#847; &zwnj;&nbsp;&#847;
+  </div>
+
+  <div class="email-outer">
+    <div class="email-card">
+
+      <!-- ═══════════════════════════════════════
+           HEADER — Logo only. No nav links.
+           Navigation above the fold bleeds focus
+           before the user reads a word.
+      ═══════════════════════════════════════ -->
+      <div class="email-header">
+        <div class="logo-mark">
+          <!-- swap: inline SVG or <img src="logo.png"> -->
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="2" width="6" height="6" rx="1.5" fill="white"/>
+            <rect x="10" y="2" width="6" height="6" rx="1.5" fill="white" opacity="0.6"/>
+            <rect x="2" y="10" width="6" height="6" rx="1.5" fill="white" opacity="0.6"/>
+            <rect x="10" y="10" width="6" height="6" rx="1.5" fill="white" opacity="0.3"/>
+          </svg>
+        </div>
+        <span class="logo-wordmark">[Product Name]</span>
+      </div>
+
+      <!-- ═══════════════════════════════════════
+           HERO — Above-the-fold zone
+           Everything a user needs to decide
+           "is this worth reading?" lives here.
+      ═══════════════════════════════════════ -->
+      <div class="email-hero">
+
+        <!-- Headline: state the outcome, not the feature name -->
+        <h1 class="hero-headline">
+          {{hero_headline}}
+          <!-- Example: "See exactly where your runway stands — without touching a spreadsheet." -->
+        </h1>
+
+        <!-- Subhead: connect to where the user is in their journey right now -->
+        <p class="hero-sub">
+          {{hero_subhead}}
+          <!-- Example: "You've connected your bank account. This is the next step that turns raw transactions into a picture you can act on." -->
+        </p>
+
+        <!-- PRIMARY CTA — action verb, high contrast, single destination -->
+        <a href="{{cta_url}}" class="btn-primary">
+          {{cta_label}}
+          <!-- Example labels: "Try it now →" / "See it in action →" / "Set it up in 2 minutes →" -->
+        </a>
+        <p class="btn-caption">{{cta_caption}}</p>
+        <!-- Example caption: "Takes 2 minutes &nbsp;·&nbsp; No credit card needed" -->
+
+      </div><!-- /.email-hero -->
+
+      <div class="email-body">
+
+        <!-- ── What it is + Why it matters ───────────────────
+             Target: 2–4 sentences.
+             Line 1: plain-English description of the feature.
+             Lines 2–3: why it matters to this specific user now.
+             Do not recap what they already know.
+        ──────────────────────────────────────────────────── -->
+        <div class="intro-copy">
+          <p>{{intro_what}}</p>
+          <!-- Example: "[Feature name] gives you a live view of your cash position — updated automatically each time a transaction comes in." -->
+          <p>{{intro_why}}</p>
+          <!-- Example: "Most founders catch a shortfall <strong>after</strong> it hits. This shows you the dip <strong>before</strong> it happens, so you have time to act." -->
+        </div>
+
+        <!-- ── Image block ─────────────────────────────────
+             Options (pick one per email):
+               • Static screenshot   — lowest friction to produce
+               • Annotated PNG       — arrows/callouts baked in; most instructive
+               • GIF / short clip    — show the feature in motion; keep under 1 MB
+               • Before / After      — effective when the feature transforms something
+
+             Max-width 520px keeps layout stable across clients.
+             Always set alt text — many users read with images off.
+        ──────────────────────────────────────────────────── -->
+        <div class="image-block">
+          <img
+            src="{{feature_image_url}}"
+            alt="{{feature_image_alt}}"
+            width="520"
+          >
+        </div>
+        <p class="image-caption">{{image_caption}}</p>
+        <!-- Example caption: "Annotated: the three numbers that matter most on your cash flow view." -->
+
+        <!-- ── How it works — numbered steps ─────────────────
+             3 steps max for a single-feature email.
+             Title = what to do. Body = the result or why it matters.
+        ──────────────────────────────────────────────────── -->
+        <p class="section-label">How it works</p>
+        <ul class="steps-list">
+          <li>
+            <span class="step-num">1</span>
+            <div class="step-text">
+              <h3>{{step_1_title}}</h3>
+              <p>{{step_1_body}}</p>
+            </div>
+          </li>
+          <li>
+            <span class="step-num">2</span>
+            <div class="step-text">
+              <h3>{{step_2_title}}</h3>
+              <p>{{step_2_body}}</p>
+            </div>
+          </li>
+          <li>
+            <span class="step-num">3</span>
+            <div class="step-text">
+              <h3>{{step_3_title}}</h3>
+              <p>{{step_3_body}}</p>
+            </div>
+          </li>
+        </ul>
+
+        <!-- ── Social proof ────────────────────────────────
+             One sentence. Data-driven stat or direct quote.
+             Answers "does this actually work?" before the CTA.
+             Not a full testimonial block.
+        ──────────────────────────────────────────────────── -->
+        <div class="proof-strip">
+          <span class="proof-icon">&#128172;</span>
+          <!-- swap: testimonial quote icon, checkmark, or stat icon -->
+          <p class="proof-text">
+            {{proof_text}}
+            <!-- Example: "<strong>Teams that set up cash flow forecasting in their first week are 3× more likely to hit their 90-day runway target</strong> — based on data across 2,000+ [Product] accounts." -->
+          </p>
+        </div>
+
+        <!-- ── Repeat CTA ──────────────────────────────────
+             Same URL as hero CTA. Placed after steps + proof
+             so users who skimmed can act immediately.
+             This is NOT a second CTA — it's the same destination.
+        ──────────────────────────────────────────────────── -->
+        <a href="{{cta_url}}" class="btn-primary">
+          {{cta_label}}
+        </a>
+        <p class="btn-caption" style="margin-bottom: 0;">{{cta_caption}}</p>
+
+        <div class="divider"></div>
+
+        <!-- ── Personal sign-off ──────────────────────────── -->
+        <div class="signoff">
+          <div class="avatar">
+            <!-- swap: <img src="{{sender_avatar_url}}" alt="{{sender_name}}"> -->
+            &#128100;
+          </div>
+          <div class="signoff-text">
+            <p>
+              <strong>{{sender_name}}</strong><br>
+              {{signoff_text}}
+              <!-- Example: "I wrote this email personally — if you hit a snag or have a question, just hit reply." -->
+            </p>
+          </div>
+        </div>
+
+      </div><!-- /.email-body -->
+
+      <!-- ═══════════════════════════════════════
+           FOOTER
+           Elements: help link (text only — not a button),
+           unsubscribe, reason for receiving, address, privacy.
+      ═══════════════════════════════════════ -->
+      <div class="email-footer">
+        <div class="footer-links">
+          <a href="{{help_url}}">Need help? Visit our docs</a>
+          &nbsp;&middot;&nbsp;
+          <a href="{{unsubscribe_url}}">Unsubscribe</a>
+        </div>
+        <p class="footer-legal">
+          &copy; {{year}} [Company Legal Name] &middot; [Street Address, City, State ZIP]<br>
+          You're receiving this because you signed up for a [Product Name] account.<br>
+          <a href="{{privacy_url}}">Privacy Policy</a>
+        </p>
+      </div>
+
+    </div><!-- /.email-card -->
+  </div><!-- /.email-outer -->
+
 </body>
 </html>
